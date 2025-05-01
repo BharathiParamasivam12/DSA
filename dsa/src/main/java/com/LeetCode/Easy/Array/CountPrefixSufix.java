@@ -1,4 +1,4 @@
-package com.LeetCode.Easy;
+package com.LeetCode.Easy.Array;
 
 public class CountPrefixSufix {
      public int countPrefixSuffixPairs(String[] words) {
