@@ -1,0 +1,102 @@
+2-d 
+
+rows, columns - Tables, Matrices
+
+Row 0 → [1][2][3]
+Row 1 → [4][5][6]
+Row 2 → [7][8][9]
+
+
+3-d 
+
+depth(layer), row , column - Cube
+
+Layer 0:
+[1, 2, 3]  
+[4, 5, 6]  
+[7, 8, 9]  
+
+Layer 1:
+[10, 11, 12]  
+[13, 14, 15]  
+[16, 17, 18]  
+
+
+_--_---_----_--------_--------_
+
+# Time and Space Complexity of Arrays (1D, 2D, Multi-Dimensional)
+
+Understanding the time and space complexity of arrays is crucial for writing efficient code. Below is a breakdown for different operations.
+
+---
+
+## 1. 1D Arrays (Single Dimension)
+### Space Complexity
+- `O(n)` – Stores `n` elements in contiguous memory.
+
+### Time Complexity
+| Operation       | Time Complexity | Explanation |
+|----------------------|---------------------|----------------|
+| Access (`arr[i]`) | `O(1)` | Direct indexing (random access) |
+| Search (Linear)  | `O(n)` | Must check each element in worst case |
+| Insertion at End | `O(1)` (Amortized) | If space is available |
+| Insertion at Middle | `O(n)` | Requires shifting elements |
+| Deletion at End | `O(1)` | No shifting needed |
+| Deletion at Middle | `O(n)` | Requires shifting elements |
+
+---
+
+## 2. 2D Arrays (Matrix)
+### Space Complexity
+- `O(n × m)` – Stores `n` rows and `m` columns.
+
+### Time Complexity
+| Operation       | Time Complexity | Explanation |
+|----------------------|---------------------|----------------|
+| Access (`arr[i][j]`) | `O(1)` | Direct indexing |
+| Search (Linear)  | `O(n × m)` | Must check each element in worst case |
+| Row Insertion/Deletion | `O(m)` | Shifts columns in a row |
+| Column Insertion/Deletion | `O(n × m)` | Shifts all subsequent rows |
+| Traversal (Nested Loops) | `O(n × m)` | Visits every element |
+
+---
+
+## 3. 3D Arrays (Cube)
+### Space Complexity
+- `O(n × m × p)` – Stores `n` layers, `m` rows, `p` columns.
+
+### Time Complexity
+| Operation       | Time Complexity | Explanation |
+|----------------------|---------------------|----------------|
+| Access (`arr[i][j][k]`) | `O(1)` | Direct indexing |
+| Search (Linear)  | `O(n × m × p)` | Must check every element |
+| Traversal (Triple Loop) | `O(n × m × p)` | Visits every element |
+
+---
+
+## 4. Jagged Arrays (Non-Uniform Rows)
+### Space Complexity
+- `O(total_elements)` – Depends on row lengths.
+
+### Time Complexity
+| Operation       | Time Complexity | Explanation |
+|----------------------|---------------------|----------------|
+| Access (`arr[i][j]`) | `O(1)` | Direct indexing |
+| Search (Linear)  | `O(total_elements)` | Must check all elements |
+| Traversal | `O(total_elements)` | Visits every element |
+
+---
+
+## Key Takeaways
+✅ Accessing any element in an array is `O(1)` (constant time).  
+✅ Searching is `O(n)` (linear time) for 1D, `O(n×m)` for 2D, etc.  
+✅ Insertion/Deletion in the middle requires shifting → `O(n)` (slow).  
+✅ Traversing a full array is `O(n)` for 1D, `O(n×m)` for 2D, etc.  
+✅ Space complexity grows with dimensions (`O(n)`, `O(n×m)`, `O(n×m×p)`).  
+
+---
+
+### When to Use Arrays?
+✔ Fast random access (e.g., lookup tables).  
+✔ Fixed-size data (e.g., matrices, images).  
+❌ Avoid for frequent insertions/deletions (use `ArrayList` or `LinkedList` instead).  

@@ -1,0 +1,68 @@
+Big O
+Big O is a notation used to describe the computational complexity of an algorithm. The computational complexity of an algorithm is split into two parts: time complexity and space complexity. The time complexity of an algorithm is the amount of time the algorithm needs to run relative to the input size. The space complexity of an algorithm is the amount of memory allocated by the algorithm when run relative to the input size.
+
+Typically, people care about the time complexity more than the space complexity, but both are important to know.
+
+Time complexity: as the input size grows, how much longer does the algorithm take to complete?
+
+Space complexity: as the input size grows, how much more memory does the algorithm use?
+
+# Big O Time Complexity Explained Simply 🚀
+
+Big O notation describes how fast an algorithm runs as the input size grows. Here's a simple breakdown:
+
+---
+
+## Common Time Complexities (Fastest to Slowest)
+
+| Big O  | Name         | Example                          | What It Means |
+|------------|------------------|--------------------------------------|------------------|
+| O(1)     | Constant Time    | `arr[3]` (Array access)              | Instant, no matter how big the input |
+| O(log n) | Logarithmic Time | Binary Search                        | Very fast, splits data in half each step |
+| O(n)     | Linear Time      | Looping through an array             | Time grows directly with input size |
+| O(n log n) | Linearithmic    | Merge Sort, Quick Sort               | Faster than O(n²), common in sorting |
+| O(n²)     | Quadratic Time   | Nested loops (e.g., Bubble Sort)     | Gets slow quickly (100 items → 10,000 steps) |
+| O(2ⁿ)     | Exponential Time | Brute-force password cracking        | Extremely slow, impractical for large inputs |
+| O(n!)     | Factorial Time   | Solving the "Traveling Salesman" naively | Unusable beyond tiny inputs |
+
+---
+
+## Real-Life Analogies 🌍
+- O(1) → Finding a book by its exact shelf position.
+- O(log n) → Searching a phone book by flipping halfway each time.
+- O(n) → Reading every book in a library to find one.
+- O(n²) → Checking every pair of books for duplicates.
+- O(2ⁿ) → Trying every possible password combination.
+- O(n!) → Testing every possible route between cities.
+
+---
+
+## Which One Should You Aim For?
+✅ Best: `O(1)` or `O(log n)` (super fast)  
+✅ Good: `O(n)` or `O(n log n)` (scales well)  
+⚠ Avoid if possible: `O(n²)`, `O(2ⁿ)`, `O(n!)` (gets slow fast)  
+
+---
+
+### Quick Example in Code
+```java
+// O(1) - Constant Time
+int firstElement = arr[0];
+
+// O(n) - Linear Time
+for (int num : arr) {
+    System.out.println(num);
+}
+
+// O(n²) - Quadratic Time (Nested Loop)
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        System.out.println(i + ", " + j);
+    }
+}
+```
+
+---
+
+### Key Takeaway
+Big O helps you predict how your code will perform as data grows.  
