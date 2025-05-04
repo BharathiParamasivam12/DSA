@@ -1,0 +1,210 @@
+Great! Here's a **structured 3-week DSA roadmap** tailored for interview prep — beginner to intermediate — covering:
+
+* 🔹 **Data Structures**
+* 🔹 **Pattern-based Problem Solving**
+* 🔹 **Algorithms**
+* 🔹 **Formulas/Key Insights**
+* 🔹 **5 Sample Problems per Category** (most commonly asked)
+
+---
+
+## 📅 **3-Week DSA Plan**
+
+---
+
+### **🔶 Week 1: Foundations + Core Data Structures**
+
+#### 🧠 Topics:
+
+* Arrays & Strings
+* Hashing (Map/Set)
+* Stack & Queue
+* LinkedList
+
+#### 🛠️ Patterns:
+
+* Sliding Window
+* Two Pointers
+* Prefix Sum
+
+#### 📝 Key Points:
+
+* Time & Space complexity basics (Big-O)
+* Difference between array vs linked list operations
+* Stack for expression problems, Queue for BFS logic
+
+#### ✅ 5 Must-Solve Problems per Topic:
+
+**📌 Arrays & Strings**
+
+1. Two Sum (LeetCode 1)
+2. Best Time to Buy and Sell Stock (LC 121)
+3. Move Zeroes (LC 283)
+4. Kadane’s Algorithm - Maximum Subarray (LC 53)
+5. Rotate Array (LC 189)
+
+**📌 Hashing**
+
+1. Contains Duplicate (LC 217)
+2. Group Anagrams (LC 49)
+3. Longest Consecutive Sequence (LC 128)
+4. Subarray Sum Equals K (LC 560)
+5. Top K Frequent Elements (LC 347)
+
+**📌 Stack & Queue**
+
+1. Valid Parentheses (LC 20)
+2. Min Stack (LC 155)
+3. Daily Temperatures (LC 739)
+4. Implement Queue using Stacks
+5. Next Greater Element (LC 496)
+
+**📌 Linked List**
+
+1. Reverse Linked List (LC 206)
+2. Detect Cycle (LC 141)
+3. Merge Two Sorted Lists (LC 21)
+4. Remove Nth Node From End (LC 19)
+5. Palindrome Linked List (LC 234)
+
+---
+
+### **🔷 Week 2: Algorithms + Intermediate Patterns**
+
+#### 🧠 Topics:
+
+* Binary Search
+* Recursion & Backtracking
+* Sorting Techniques
+* Two Heaps (Priority Queue)
+* Bit Manipulation
+
+#### 🛠️ Patterns:
+
+* Binary Search on Answers
+* Subsets & Permutations
+* Min/Max Heap (for streaming data)
+* Bit Masking
+
+#### ✅ 5 Must-Solve Problems per Topic:
+
+**📌 Binary Search**
+
+1. Binary Search (LC 704)
+2. Find First and Last Position (LC 34)
+3. Search in Rotated Sorted Array (LC 33)
+4. Median of Two Sorted Arrays (LC 4)
+5. Koko Eating Bananas (LC 875)
+
+**📌 Recursion & Backtracking**
+
+1. Subsets (LC 78)
+2. Permutations (LC 46)
+3. N-Queens
+4. Word Search (LC 79)
+5. Letter Combinations of Phone Number (LC 17)
+
+**📌 Sorting**
+
+1. Merge Sort (Coding)
+2. Quick Sort (Coding)
+3. Sort Colors (LC 75)
+4. Kth Largest Element (LC 215)
+5. Merge Intervals (LC 56)
+
+**📌 Priority Queue**
+
+1. K Closest Points to Origin (LC 973)
+2. Top K Frequent Words (LC 692)
+3. Merge K Sorted Lists (LC 23)
+4. Find Median from Data Stream (LC 295)
+5. Task Scheduler (LC 621)
+
+**📌 Bit Manipulation**
+
+1. Single Number (LC 136)
+2. Sum of Two Integers (LC 371)
+3. Counting Bits (LC 338)
+4. Power of Two (LC 231)
+5. Number of 1 Bits (LC 191)
+
+---
+
+### **🔷 Week 3: Graphs + Dynamic Programming + Greedy + Miscellaneous**
+
+#### 🧠 Topics:
+
+* DFS, BFS
+* Union-Find
+* Dynamic Programming
+* Greedy
+* Trie (basic)
+
+#### 🛠️ Patterns:
+
+* Memoization & Tabulation
+* BFS for shortest path
+* Greedy with sorting/priority queues
+
+#### ✅ 5 Must-Solve Problems per Topic:
+
+**📌 Graphs (DFS/BFS/Union-Find)**
+
+1. Number of Islands (LC 200)
+2. Clone Graph (LC 133)
+3. Course Schedule (LC 207)
+4. Graph Valid Tree (LC 261)
+5. Redundant Connection (LC 684)
+
+**📌 Dynamic Programming**
+
+1. Climbing Stairs (LC 70)
+2. House Robber (LC 198)
+3. Longest Increasing Subsequence (LC 300)
+4. Coin Change (LC 322)
+5. Edit Distance (LC 72)
+
+**📌 Greedy**
+
+1. Jump Game (LC 55)
+2. Gas Station (LC 134)
+3. Non-overlapping Intervals (LC 435)
+4. Partition Labels (LC 763)
+5. Minimum Number of Arrows (LC 452)
+
+**📌 Trie (Optional)**
+
+1. Implement Trie (LC 208)
+2. Replace Words (LC 648)
+3. Search Suggestions System (LC 1268)
+4. Word Search II (LC 212)
+5. Longest Word in Dictionary (LC 720)
+
+---
+
+## 🧠 Formulas, Tricks, and Notes
+
+* **Prefix Sum:** `prefix[i] = prefix[i-1] + nums[i]`
+* **Kadane's Algo:** `max = Math.max(curr, curr + arr[i])`
+* **Bit XOR Trick:** `a ^ a = 0`, use to find unique numbers
+* **Heap for Top-K:** MinHeap size K
+* **DP Template:**
+
+  ```java
+  int[] dp = new int[n+1];
+  for (int i = 1; i <= n; i++) {
+      dp[i] = Math.min(dp[i-1], ...) + cost[i];
+  }
+  ```
+
+---
+
+## 🧩 Resources
+
+* [LeetCode Patterns List](https://seanprashad.com/leetcode-patterns/)
+* Neetcode 150 playlist
+* Daily practice on [leetcode.com](https://leetcode.com/) or [geeksforgeeks.org](https://www.geeksforgeeks.org/)
+
+---
+
+Would you like this in a printable Google Sheet format or a Notion study board?

@@ -1,13 +1,12 @@
 package com.LeetCode.Easy.Array;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class RomanToInteger {
-    public static void main(String[] args) {
+class Solution {
+    public int romanToInt(String s) {
         int minus = 0;
      
-        String s = "III";
+     //   String s = "MCMXCIV";
         int count = 0;
         HashMap<String, Integer> map = new HashMap<String,Integer>();
         map.put("I",1);
@@ -19,15 +18,15 @@ public class RomanToInteger {
         map.put("M",1000);
 
         String[] input = s.split("");
-    
+        int k=0;
+    while(input[k+1] != null){
        for(int i=0; i<input.length; i++){
             String in = input[i];
 
             if(map.containsKey(in)){
                 count = map.get(in) + count;
             }
-        if (i + 1 < input.length && input[i + 1] != null && !input[i + 1].isEmpty()) {   
-             if(in.equals("I")){
+            if(in.equals("I")){
                 if(input[i+1].equals("V" ) || input[i+1].equals( "X")){
                     minus = minus +2;
                 }
@@ -41,13 +40,11 @@ public class RomanToInteger {
                 if(input[i+1].equals("D" ) || input[i+1].equals( "M")){
                     minus = minus + 200;
                 }
-            }
+            }        
+       }
+       k++;
         }
-
-            
-        
-        }
-        System.out.println(count-minus);
-        
+            return count- minus;
+         
     }
 }
