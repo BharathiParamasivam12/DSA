@@ -84,12 +84,14 @@ public class LinkedLists {
         Node loopNode = head;  //starting point
 
         for(int i=0; i< index-1; i++){
-            loopNode = loopNode.nextNode;         
+            loopNode = loopNode.nextNode;         // it stops one node before delete node
         }
         deleteNode = loopNode.nextNode;
         loopNode.nextNode = deleteNode.nextNode;
         System.err.println("deleted node:" +loopNode.data);
     }
+
+    
 
 }
 

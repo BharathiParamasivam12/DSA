@@ -17,6 +17,7 @@ public class FindElementsCount {
         int count = 0; 
         while(input>0){
             input = input/10;
+          //  System.out.println(input);
                 count++;
                
         }
