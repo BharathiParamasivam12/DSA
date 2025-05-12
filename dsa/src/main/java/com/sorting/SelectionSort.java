@@ -10,7 +10,7 @@ package com.sorting;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] input = new int[]{9,2,10,2,8,3};
-        doSelectionSortAgain(input);
+        selectionSortRevise(input);
     }
 
     static int minIndex = -1;
@@ -54,5 +54,22 @@ public class SelectionSort {
             input[min] = temp;
            
         }
+    }
+
+
+    public static void selectionSortRevise(int[] input ){
+        for(int i=0; i<input.length-1; i++){
+            int min = i; 
+            for(int j= i+1; j<input.length; j++){
+                if(input[j] < input[min]){
+                    min = j;
+                }
+            }
+            int temp = input[i];
+            input[i] = input[min];
+            input[min] = temp;
+            
+        }
+        doDisplay(input);
     }
 }

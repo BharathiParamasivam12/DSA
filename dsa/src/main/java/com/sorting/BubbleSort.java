@@ -7,7 +7,7 @@ package com.sorting;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] input = new int[]{4,7,2,1,10,8,3};
-        doBubbleSortAgain(input);
+        bubbleSortRevise(input);
        //  doBubbleSort(new int[]{1, 2 ,3 ,4 ,7, 8 ,10});
 
     }
@@ -44,6 +44,20 @@ public class BubbleSort {
             }
            
         }
+    }
+
+    public static void bubbleSortRevise(int[] input){
+        for(int i =0; i<input.length-1; i++){
+            for(int j=0; j<input.length-1; j++){
+                if(input[j] >input[j+1]){
+                    int temp = input[j];
+                    input[j] = input[j+1];
+                    input[j+1] = temp;
+
+                }
+            }
+        }
+        doDisplay(input);
     }
 
      public static  void doDisplay(int[] input){

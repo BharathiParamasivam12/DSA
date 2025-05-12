@@ -14,7 +14,7 @@ package com.sorting;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] input = new int[] {4,1,8,6,3,10,2};
-        doInsertionSort(input);
+        insertionSortRevise(input);
     }
 
     public static void doInsertionSort(int[] input){
@@ -37,5 +37,21 @@ public class InsertionSort {
             System.out.print(input[i]+ " ");
         }
         System.out.println();
+    }
+
+
+    public static void insertionSortRevise(int[] input){
+        
+        for(int i=1; i<input.length; i++){
+            int temp=input[i];
+            int j=i-1;
+            while (j>=0 && input[j]>temp){
+                input[j+1] = input[j];
+                j--;
+            }
+            input[j+1] = temp;
+        
+        }
+            doDisplay(input);
     }
 }
